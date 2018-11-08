@@ -15,7 +15,29 @@ public class JavaApplication1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+          
+        Integer[] a = {1,2,3,-5};
+        System.out.println(maxElement(a));
+
+
+    }
+    
+    public static Integer maxElement(Integer[] a)
+    {
+        if (a==null || a.length==0) return null;
+        
+        Integer max = Integer.MIN_VALUE;
+        for(int i=0;i<a.length;i++)
+        {
+            if (max<a[i]) max = a[i];
+        }
+        
+        for (int i : a)
+        {
+            if(max<i) max = i;
+        }
+        
+        return max;
     }
     
 }
